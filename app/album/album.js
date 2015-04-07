@@ -9,6 +9,6 @@ angular.module('myApp.album', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('albumCtrl', [function() {
 
 }]);
