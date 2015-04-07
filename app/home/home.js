@@ -9,6 +9,6 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('homeCtrl', [function() {
 
 }]);
