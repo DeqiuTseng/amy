@@ -10,4 +10,6 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
+
+      AV.initialize('JDseHTU9NbVAyQNVqHAuvCU3-gzGzoHsz','SuUxs91btjGn65BNpW9j95fS');
 }]);
