@@ -47,7 +47,7 @@ angular.module('myApp.home', ['ngRoute'])
     console.info(angular.toJson(articleObj));
 
     Article.save(articleObj).then(function() {
-      alert('LeanCloud works!');
+      //alert('LeanCloud works!');
     }).catch(function(err) {
       alert('error:' + err);
     });
