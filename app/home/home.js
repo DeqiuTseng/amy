@@ -20,6 +20,7 @@ angular.module('myApp.home', ['ngRoute'])
       function loadingArticle(){
         var query = new AV.Query('Article');
         //query.equalTo('pubUser', 'LeanCloud官方客服');
+        query.descending('createdAt');
         query.find().then(function(results) {
             console.info(angular.toJson(results));
           $scope.$apply(function(){
@@ -35,6 +36,8 @@ angular.module('myApp.home', ['ngRoute'])
         });
       }
   $scope.addArticle=function(){
+    var articleContent =CKEDITOR.instances.articleContent.getData(); //$("#articleContent").val();
+    $scope.article.content=articleContent;
     if($scope.article.title=="" || $scope.article.content==""){
       return;
     }

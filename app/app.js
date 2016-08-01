@@ -8,8 +8,9 @@ angular.module('myApp', [
     'myApp.mv',
   'myApp.version'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider','$sceProvider', function($routeProvider,$sceProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
+  $sceProvider.enabled(false);
 
       AV.initialize('JDseHTU9NbVAyQNVqHAuvCU3-gzGzoHsz','SuUxs91btjGn65BNpW9j95fS');
 }]);
