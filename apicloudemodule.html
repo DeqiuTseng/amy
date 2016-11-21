@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APICloude模块开发</title>
+</head>
+<body style="margin-left: 100px">
+<h2>APICloude->键盘监听</h2>
+<h3>原因</h3>
+<p>
+    此模块的插件目的:在APICloude平台进行应用开发时,在input或text标签中进行文字输入时出现键盘遮挡或输入框未紧贴键盘上方位置
+</p>
+<h3>功能演示</h3>
+<img src="sourcefile/键盘监听.gif">
+<br/>
+<p4>加载模块</p4><br>
+<textarea style="width: 600px;height: 100px">
+    function apiready() {
+    modulekeyboard = api.require('modulekeyboard');
+}
+</textarea>
+<br/>
+<p4>调用函数</p4>
+<p>进行接口监听,只需要调用一次即可,重复接收回调函数获取当前键盘的状态及高度返回值.</p>
+<textarea style="width: 600px;height: 100px">
+    modulekeyboard.ListenerKeyboardHandle({
+        msg:''
+    },function(ret,err){
+        console.info("keyboardstatus:"+ret.keyboardstatus+"height:"+ret.height);
+    });
+</textarea>
+
+
+<h3>功能演示2(去工具栏)</h3>
+<img src="sourcefile/keyboard2.gif">
+<br/>
+<p4>工具栏默认是去掉的所以无需设置,只需要调用关闭键盘的使用方法</p4><br>
+<textarea style="width: 600px;height: 100px">
+function closekeyboard() {
+modulekeyboard.keyboardclose();
+}
+    </textarea>
+    <br>
+
+    <p>
+       <div style="color: red"> 所使用方法全都介绍完了,有问题点击右边QQ Logo  ====> <img  style="CURSOR: pointer" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=1274336210&o=deqiutseng&q=7', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0" SRC=http://wpa.qq.com/pa?p=1:1274336210:1 alt="点击这里给我发消息"></div>
+
+    </p>
+
+    <p>
+        &nbsp;
+    </p>
+<p>
+    &nbsp;
+</p>
+</body>
+</html>
